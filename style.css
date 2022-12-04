@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+/*  рассылка  */
+
+.subscribe{
+    background-color: #8c8e8f;
+    padding: 20px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    color: rgb(37, 33, 33);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+input{
+    font-family: 'Comfortaa', cursive;
+    color: #00acee;
+    font-weight: 600;
+}
+
+input:focus{
+    background-color: #e3f1fc;
+}
+
+.subscribeP{
+    color: #fffefe;
+}
+
+/*  шапка  */
+
+header{
+    display: flex;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 300px;
+    max-height: 62px;
+    transition: transform 1s;
+    animation: flash 0.001s infinite;
+}
+
+nav{
+    height: 500px;
+    width: 90px;
+    margin-right: 5%;
+    font-size: 20px;
+    max-width: 300px;
+    max-height: 100px;
+    display: block;
+}
+
+ul{
+  display: flex;
+  max-width: 300px;
+  max-height: 62px;
+}
+
+li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+.menu{
+    text-decoration: none;
+    color: red;
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 1s;
+    animation: wobble 2s 1;
+}
+
+.menu:visited{
+    color:#363434;
+}
+
+/*  main  */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 300px;
+}
+
+.line{
+    width: 55%;
+    height: 2px;
+    background-color: black;
+}
+
+article{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width:20%;
+}
+
+.img{
+    width: 100%;
+    transition: transform 2s;
+    animation: moveCard 2s 1;
+}
+
+@keyframes moveCard{
+    0%   { margin-top: 100vh;}
+    100% { margin-top: 0;}
+   }
+
+.text{
+    background-color:lightcoral ;
+    color:rgb(0, 0, 0);
+    max-width: 100%;
+    padding: 15px;
+}
+
+/*  footer  */
+
+footer{
+    background-color: rgb(46, 42, 42);
+    color:#777777;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerA1{
+    color: #ff5311;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerA{
+    color:#ff0000 ;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerP{
+    margin-left: 30px;
+}
+.logo:active{
+transform: rotate(360deg);
+}
+img:hover{
+    transform: scale(1.2);
+}
+.text::first-letter{
+    color: #ff5311;
+    font-size: 24px;
+}
+li:first-child:hover{
+  animation: move1 1s infinite;
+}
+
+.adv{
+    width: 500px;
+    height: 0px;
+    padding:5px;
+    background-image: url(images/реклама.jpg);
+    background-size: cover;
+    bottom: 0px;
+    position: fixed;
+    right:0;
+    size: 100px;
+    display: inline-block;
+
+    animation: advMove 3s 1;
+}
+
+    @keyframes advMove{
+        0%   { right: -200vw;}
+        100% { right: 0;}
+    }
+
+    /* планшеты горизонтально */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+
+}
+
+/* телефоны вертикально */
+@media (max-width: 480px) {
+
+}
+
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+    span{
+        font-size: 20px;
+    }
+    input{
+        max-width: 100px;
+    }
+    header,article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 50%;
+        padding-bottom: 10px;
+    }
+}
+
+/* телефоны вертикально */
+@media (max-width: 480px) {
+    header{
+        flex-direction: column;
+    }
+    nav{
+        margin-right:0;
+    }
+    li{
+        margin-right: 5px;
+    }
+    .card{
+        width: 70%;
+    }
+    .group{
+        flex-direction: column;
+        padding-left:5px;
+    }
+}
+
+.logo{
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 1s;
+    animation: wobble 2s 1;
+}
+
+.ul{
+    max-width: 300px;
+    max-height: 62px;
+    transition: transform 1s;
+}
+.menu{
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 1s;
+    animation: wobble 2s 1;
+}
+
+.site{
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 1s;
+}
+
+.quet{
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 1s;
+    animation: wobble 2s 1;
+}
+
+.quet{
+    animation: none;
+}
+
+.subscribe{
+    background-color: #777777;
+}
+
+.main{
+    background-color: #777777;
+}
+
+.head{
+    background-color: #777777;
+}
+
+.html{
+    color: #777777;
+}
+
+.body{
+    display: flex;
+    background: local;
+    
+}
+
+.nav{
+    transform: scale(1s);
+    animation: move1 1s l;
+}
+
+header {
+    display: block; /* Для старых браузеров */
+    height: 400px; /* Высота шапки */
+    left: 400px;
+    width: 2188px;
+    background: url(images/777.png) no-repeat center bottom;
+   }
